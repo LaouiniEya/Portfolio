@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- font link-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Romanesco&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page1.css">
+    <!-- boostrap link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+
+ 
+    <!-- icone link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+</head>
+<body>
+  <div class="all-content">
+    <!-- Nav Bar Start -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+        </div>
+    </nav>
+    <!-- Nav Bar End -->
+ 
+    <!-- Background Music (Hidden) -->
+    <audio id="background-music" loop preload="auto">
+      <source src="Fairy Tales  Magical Fantasy 🌸.mp3" type="audio/mpeg">
+  </audio>
+   
+    <!--Nav bar end -->
+    
+  
+    <div class="wrapper" id="glowWrapper">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    
+
+   <!-- Home section start-->
+   <section id="Home">
+  <div class="content">
+<button id="play-music">
+  Play Music
+</button>
+    <div id="wonderland-container">
+      <img id="under-door-image-2"
+           src="./the-one-and-only-2.gif"
+           class="img-fluid"
+           alt="Wonderland image">
+    </div>
+
+    <div id="wonderland-text" class="magic-text">
+      <h1>Welcome to My Wonderland</h1>
+
+      <div class="scroll-hint">Scroll to explore</div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("background-music");
+            let playButton = document.getElementById("play-music");
+
+            playButton.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevents default behavior
+
+                if (audio.paused) {
+                    audio.play();  
+                    playButton.textContent = "Pause Music"; // Updates text
+                } else {
+                    audio.pause();
+                    playButton.textContent = "Play Music"; // Reverts text
+                }
+            });
+        });
+    </script>
+        </div>
+    </div>
+</section>
+</div>
+
+
+ 
+  
+
+
+
+<section id="about">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-6 py-3 py-md-0">
+        <div class="card move-card" style="background-color: #fdfbee;" onclick="openPopup('popup-about')">
+          <div class="card-body">
+            <h3> Flip Cooking Book for Kids </h3>
+            <h2 id="tapHere" class="tap-here">
+            <i class="fa-solid fa-computer-mouse"></i> Click to Flip
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Pop-up spécifique pour "About" avec Flipbook -->
+  <div id="popup-about" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+      <h3>Flipbook</h3>
+      
+      <!-- Intégration de l'iframe ici -->
+      <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;
+      width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/aggas/bpme/"  seamless="seamless" scrolling="no" frameborder="0" 
+      allowtransparency="true" allowfullscreen="true" ></iframe>
+    </div>
+    </div>
+  </div>
+
+
+
+ <section id="part1">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 py-3 py-md-0">
+        <div class="card move-card" style="background-color: #fdfbee;" onclick="openPopup('popup-part1')">
+          <div class="card-body">
+            <h3> Emotion Explorer Game</h3>
+            <h2 id="tapHere" class="tap-here">
+            <i class="fa-solid fa-computer-mouse"></i> Click & Scroll
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full-screen Pop-up for Services (Illustrations only) -->
+<div id="popup-part1" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup('popup-part1')">&times;</span>
+
+    <div class="part1">
+      <img src="GameDesign/1.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/2.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/3.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/4.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/5.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/6.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/77.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/8.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/9.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/10.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/11.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/12.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/13.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/14.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/15.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/16.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/stickers.png" alt="Illustration 1" class="popup-img">
+      <img src="GameDesign/17.png" alt="Illustration 1" class="popup-img">
+
+     
+    </div>
+  </div>
+</div>
+
+
+<section id="services">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-12 col-md-6 py-3 py-md-0">
+        <div class="card move-card" style="background-color: #fdfbee;" onclick="openPopup('popup-services')">
+          <div class="card-body">
+            <h3> Cover Art & Illustrations</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full-screen Pop-up for Services (Illustrations only) -->
+<div id="popup-services" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+
+    <div class="services">
+      <img src="cover books/modher.gif" alt="Illustration 1" class="popup-img">
+     <img src="cover books/MENTAL-HEALTH.gif" alt="Illustration 2" class="popup-img">
+     <img src="ILLUSTRATIONS/11bedr.jpg" alt="Illustration 2" class="popup-img">
+       <img src="ILLUSTRATIONS/character design.png" alt="Illustration 3" class="popup-img">
+      <img src="ILLUSTRATIONS/modher and dauhtter-01.png" alt="Illustration 3" class="popup-img">
+      <img src="ILLUSTRATIONS/sunset2.png" alt="Illustration 3" class="popup-img">
+       <img src="ILLUSTRATIONS/sunsett.jpg" alt="Illustration 3" class="popup-img">
+      <img src="ILLUSTRATIONS/fraityle.png" alt="Illustration 1" class="popup-img">
+
+
+    </div>
+  </div>
+</div>
+  
+  
+  
+  
+  
+  
+  <!-- Popups -->
+  <div id="popup-about" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+      <h3>About Pop-up</h3>
+      <p>Details about the illustrations...</p>
+    </div>
+  </div>
+  
+  
+  <div id="popup-services" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+  
+  <div id="popup-part3" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part3')">&times;</span>
+      <h3>Frontend Design Pop-up</h3>
+      <p>Details about Frontend Design & Development...</p>
+    </div>
+  </div>
+  <div id="popup-part7" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part7')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+  <div id="popup-part1" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part1')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+  <div id="popup-part6" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part6')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+  <div id="popup-part5" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part5')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+<!-- Services section end -->
+
+       
+   </section>
+
+   <div id="wand-cursor"></div>
+
+  <script>
+  const cursor = document.getElementById('wand-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX - 16 + 'px'; // Offset by half the cursor size (16px)
+      cursor.style.top = e.clientY - 16 + 'px';  // Offset by half the cursor size (16px)
+    });
+   // Function to open popup
+   
+// Function to open popup
+ function openPopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "block";
+  
+  // Hide rounds without resetting animation
+  document.getElementById("glowWrapper").classList.add("hide-rounds");
+}
+
+function closePopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "none";
+  
+  // Show rounds again
+  document.getElementById("glowWrapper").classList.remove("hide-rounds");
+}
+
+window.onclick = function(event) {
+  var popups = document.querySelectorAll('.popup');
+  popups.forEach(function(popup) {
+    if (event.target === popup) {
+      popup.style.display = "none";
+      document.getElementById("glowWrapper").classList.remove("hide-rounds");
+    }
+  });
+}
+
+
+
+</script>
+
+</body>
+
+<!-- Footer Section -->
+<footer id="footer" style=" position: relative;">
+    <div class="container">
+        <div class="footer-content">
+  
+        </div>
+    </div>
+   <!-- Arrow button bottom-left -->
+    <a href="index.html" class="back-arrow">⬅</a>
+</footer>
+</html>

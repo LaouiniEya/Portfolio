@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="page2.css">
+    <!-- boostrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+   
+    <!-- icone link-->
+    
+</head>
+<body>
+ 
+    <div class="wrapper" id="glowWrapper">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var music = document.getElementById('music');
+    // Retrieve saved playback time from localStorage
+    var savedTime = localStorage.getItem('musicTime');
+    if (savedTime) {
+      music.currentTime = savedTime;
+    }
+    // Try to play the music (may require user interaction in some browsers)
+    music.play().catch(() => console.log("Autoplay might be blocked."));
+  });
+</script>
+
+<section id="about">
+    <div class="container">
+      <audio id="background-music" loop>
+        <source src="cuterealaxing.mp3" type="audio/mpeg">
+    </audio>
+    <button id="play-music">Play Music</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         let audio = document.getElementById("background-music");
+         let playButton = document.getElementById("play-music");
+     
+         playButton.addEventListener("click", function (event) {
+             event.preventDefault(); // Prevents default behavior
+     
+             if (audio.paused) {
+                 audio.play();  
+                 playButton.textContent = "Pause Music"; // Updates text
+             } else {
+                 audio.pause();
+                 playButton.textContent = "Play Music"; // Reverts text
+             }
+         });
+     }); 
+     
+     </script>
+
+
+
+<!-- Full-screen Pop-up for "About" with images -->
+  
+  <!-- About Section (now shows Illustrations) -->
+<section id="about">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-6 py-3 py-md-0">
+        <div class="card move-card" style="background-color: #121403;" onclick="openPopup('popup-about')">
+          <div class="card-body">
+            <h3>Illustrations</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <!-- Full-screen Pop-up for About (Illustrations) -->
+<div id="popup-about" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+
+    <!-- Images displayed in full-screen -->
+    <div class="about" style="margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/FOOD 3.jpg" alt="Illustration 1" style="width: 900px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/character.png" alt="Illustration 6" class="popup-img" style="width: 900px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/modher and dauhtter-01.png" alt="Illustration 7" class="popup-img" style="width: 900px; ">
+      <img src="ILLUSTRATIONS/through my window [Converti].png" alt="Illustration 5" class="popup-img" style="width: 900px; margin-bottom: 50px; left: 50px;">
+      <img src="ILLUSTRATIONS/modher 2 1.jpg" alt="Illustration 7" class="popup-img" style="width: 900px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/elf.png" alt="Illustration 7" class="popup-img" style="width: 900px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/character design.png" alt="Illustration 1" class="popup-img" style="width: 900px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/new york city.png" alt="Illustration 7" class="popup-img" style="width: 900px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/scream5.jpg.png" alt="Illustration 5" class="popup-img" style="width: 900px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/11bedr.jpg" alt="Illustration 5" class="popup-img" style="width: 900px; height: 500px; margin-bottom: 50px;">
+      <img src="ILLUSTRATIONS/sunsett.jpg" alt="Illustration 5" class="popup-img" style="width: 900px; margin-bottom: 50px;">
+    </div>
+  </div>
+</div>
+   </section>
+
+
+  
+  <section id="services">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 py-3 py-md-0">
+          <div class="card move-card" style="background-color: #121403;" onclick="openPopup('popup-services')">
+            <div class="card-body">
+            <h3>Brand Guide</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="popup-services" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+          <div class="services" style="margin-bottom: 50px;">
+          <img src="koul s7i7/Sans titre - 1.jpg" alt="Illustration 1"style="width: 800px ;margin-bottom: 50px;" >
+          <img src="koul s7i7/12.jpg.png" alt="Illustration 2"class="popup-img" style="width: 800px;margin-bottom: 50px;" >
+          <img src="koul s7i7/13.jpg" alt="Illustration 3"class="popup-img" >
+          <img src="koul s7i7/6.png" alt="Illustration 5"class="popup-img" >
+          <img src="koul s7i7/15.jpg" alt="Illustration 6"class="popup-img" >
+          <img src="koul s7i7/16.jpg" alt="Illustration 7" class="popup-img" >
+          <img src="koul s7i7/17.jpg" alt="Illustration 8" class="popup-img" >
+          <img src="koul s7i7/18.png" alt="Illustration 9" class="popup-img" >
+          <img src="koul s7i7/19.png" alt="Illustration 10" class="popup-img" >
+          <img src="koul s7i7/20.png" alt="Illustration 11"class="popup-img" >
+      </div>
+    </div>
+  </div>
+
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  <section id="part3">
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-12 col-md-6 py-3 py-md-0">
+          <div class="card move-card" style="background-color: #121403;" onclick="openPopup('popup-part3')">
+            <div class="card-body">
+            <h3>Brand Guide </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-part3" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="closePopup('popup-part3')">&times;</span>
+          <div class="part3" style="margin-bottom: 50px;">
+          <img src="brandguide/11.jpg" alt="Illustration 1"class="popup-img" >
+          <img src="brandguide/12.jpg" alt="Illustration 2" class="popup-img">
+          <img src="brandguide/lll.jpg" alt="Illustration 3"class="popup-img" >
+          <img src="brandguide/14.jpg" alt="Illustration 4 "class="popup-img">
+          <img src="brandguide/15.jpg" alt="Illustration 5" class="popup-img">
+          <img src="brandguide/16.png" alt="Illustration 6"class="popup-img" >
+          <img src="brandguide/17.jpg" alt="Illustration 7" class="popup-img" >
+          <img src="brandguide/19.png" alt="Illustration 8" class="popup-img" >
+          <img src="brandguide/20.png" alt="Illustration 9" class="popup-img" >
+          <img src="brandguide/21.png" alt="Illustration 10" class="popup-img" >
+          <img src="brandguide/22.png" alt="Illustration 11" >
+      </div>
+    </div>
+  </div>
+
+<!-- Large Popups (Not Full-Screen) -->
+<div id="popup-about" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+      <h3>About Pop-up</h3>
+      <p>Details about the illustrations...</p>
+    </div>
+  </div>
+  
+
+<div id="popup-services" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+
+<div id="popupFrontend" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popupFrontend')">&times;</span>
+        <h2>Frontend Design & Development</h2>
+        <p>Details about Frontend Development...</p>
+    </div>
+</div>
+
+  
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- Services section end -->
+
+
+<!-- Large Popups -->
+
+   <div id="wand-cursor"></div>
+
+   <script>
+      const cursor = document.getElementById('wand-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX - 16 + 'px'; // Offset by half the cursor size (16px)
+      cursor.style.top = e.clientY - 16 + 'px';  // Offset by half the cursor size (16px)
+    });
+   // Function to open popup
+   
+// Function to open popup
+ function openPopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "block";
+  
+  // Hide rounds without resetting animation
+  document.getElementById("glowWrapper").classList.add("hide-rounds");
+}
+
+function closePopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "none";
+  
+  // Show rounds again
+  document.getElementById("glowWrapper").classList.remove("hide-rounds");
+}
+
+window.onclick = function(event) {
+  var popups = document.querySelectorAll('.popup');
+  popups.forEach(function(popup) {
+    if (event.target === popup) {
+      popup.style.display = "none";
+      document.getElementById("glowWrapper").classList.remove("hide-rounds");
+    }
+  });
+}
+
+
+</script>
+</body>
+
+<!-- Footer Section -->
+<footer id="footer" style="background-color: #121403; left: 300px;">
+    <div class="container">
+        <div class="footer-content">
+            <button onclick="window.location.href='page1.html';" class="go-to-page-btn">
+                Page 1
+            </button>
+        </div>
+    </div>
+     <!-- Arrow button bottom-left -->
+    <a href="index.html" class="back-arrow">⬅</a>
+    
+</footer>
+</html>

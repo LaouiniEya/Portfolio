@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Moo+Lah+Lah&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+                            @import url('https://fonts.cdnfonts.com/css/poppins');
+@font-face { font-family: "Romande ADF Script Std Italic";
+src: url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.eot");
+ src: url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.eot?#iefix")format("embedded-opentype"),
+url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.woff2")format("woff2"), url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.woff")format("woff"),
+ url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.ttf")format("truetype"),
+ url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.svg#Romande ADF Script Std Italic")format("svg");}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Romande ADF Script Std Italic";
+    
+}
+
+body {
+    background-color: #deb40c;
+    
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    cursor: none; /* Hide the default cursor */
+  }
+
+  /* Custom Cursor */
+  #wand-cursor {
+    position: fixed;
+    top: -52;
+    left: -100;
+    width: 100px; /* Cursor size */
+    height: 130px; /* Cursor size */
+    pointer-events: none; /* Don't let the cursor block clicks */
+    z-index:9999; /* Ensure it stays on top */
+    background: url('wood.gif') no-repeat center center; /* Only the moving image */
+    background-size: contain; /* Ensure image fits inside the cursor */
+  }
+
+  /* Make sure clickable elements hide default cursor */
+  a, button, input, textarea, select {
+    cursor: none !important; /* Hide default cursor */
+  }
+
+  /* Scrollbar customization */
+  html::-webkit-scrollbar {
+    background-color: #232707;
+    width: 10px;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: rgb(213, 186, 33);
+    border-radius: 10px;
+    box-shadow: #eef112;
+  }
+
+/* Navbar */
+#navbar {
+  background: #3b2d1500;
+  background-attachment: fixed;
+}
+body {
+background: linear-gradient(to right, #f6e7d8 40%, rgb(255, 248, 171) 70%);}
+
+.text-area {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	font-size: 50px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px #fff;
+}
+.wrapper {
+    position: fixed; /* Ensures it stays on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Higher than other elements */
+    pointer-events: none; /* Ensures it doesn’t interfere with clicks */
+}
+
+.round {
+    position: absolute;
+    width: 6px;  /* Small size */
+    height:6px; /* Small size */
+    border-radius: 50%; /* Ensures it's a perfect circle */
+    background: #fbfbe8;   
+    opacity: 0.8; /* Slight opacity for the glow effect */
+    box-shadow: 0 0 5px #f4f1bf, 0 0 10px #299cee, 0 0 15px #e4a6ce, 
+                0 0 20px #886242, 0 0 30px #a7dcf4, 0 0 40px #4b6680;
+    animation: animate 4s linear infinite, ani-2 2s linear infinite, glow 1.5s ease-in-out infinite alternate;
+}
+
+.round:nth-child(1) {
+    left: 5%;
+    animation-delay: 0.5s;
+}
+.round:nth-child(2) {
+    left: 65%;
+    animation-delay: 1s;
+}
+.round:nth-child(3) {
+    left: 90%;
+    animation-delay: 1.5s;
+}
+.round:nth-child(4) {
+    left: 18%;
+    animation-delay: 2s;
+}
+.round:nth-child(5) {
+    left: 93%;
+    animation-delay: 2.5s;
+}
+.round:nth-child(6) {
+    left: 52%;
+    animation-delay: 3s;
+}
+.round:nth-child(7) {
+    left: 65%;
+    animation-delay: 3.5s;
+}
+.round:nth-child(8) {
+    left: 35%;
+    animation-delay: 4s;
+}
+.round:nth-child(9) {
+    left: 85%;
+    animation-delay: 4.5s;
+}
+.round:nth-child(10) {
+    left: 45%;
+    animation-delay: 5s;
+}
+.round:nth-child(11) {
+    left: 36%;
+    animation-delay: 5.5s;
+}
+.round:nth-child(12) {
+    left: 72%;
+    animation-delay: 6s;
+}
+.round:nth-child(13) {
+    left: 14%;
+    animation-delay: 6.5s;
+}
+.round:nth-child(14) {
+    left: 70%;
+    animation-delay: 7s;
+}
+@keyframes animate {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+    20% {
+        top: 20%;
+        opacity: 0.8;
+    }
+    40% {
+        top: 40%;
+        opacity: 0.6;
+    }
+    60% {
+        top: 60%;
+        opacity: 0.4;
+    }
+    80% {
+        top: 80%;
+        opacity: 0.2;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+@keyframes ani-2 {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.5);
+    }
+}
+.hide-rounds {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* navbar end */
+
+
+/* Home section start */
+
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+             font-family: 'Merriweather', serif; /* this is how you apply Merriweather */
+
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    .circle {
+      width: 220px;
+      height: 220px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    .circle img {
+      width: 90%;
+      height: auto;
+    }
+
+    .content {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: #2f3d2f;
+    }
+
+    p {
+      margin: 0 0 20px;
+      font-size: 1rem;
+      color: #364d36;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn.portfolio {
+      background: #4b8b4b;
+      color: white;
+    }
+
+    .btn.portfolio:hover {
+      background: #3a6e3a;
+    }
+
+    .btn.cv {
+      background: #fff176;
+      color: #2f2f2f;
+    }
+
+    .btn.cv:hover {
+      background: #4794a1;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 700px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .buttons {
+        justify-content: center;
+      }
+    }

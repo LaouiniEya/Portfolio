@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Moo+Lah+Lah&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+                            @import url('https://fonts.cdnfonts.com/css/poppins');
+@font-face { font-family: "Romande ADF Script Std Italic";
+src: url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.eot");
+ src: url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.eot?#iefix")format("embedded-opentype"),
+url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.woff2")format("woff2"), url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.woff")format("woff"),
+ url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.ttf")format("truetype"),
+ url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.svg#Romande ADF Script Std Italic")format("svg");}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Romande ADF Script Std Italic"; 
+    font-size: 14px;
+    background-color: #3b2d1500; 
+     } 
+
+
+ body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      cursor: none; /* Hide the default cursor */
+       margin: 0;
+        background-color: #fdfbee; /* Keeps the dark background */
+    padding-bottom: 200px; /* space so cards are visible */
+    }
+
+    /* Custom Cursor */
+    #wand-cursor {
+      position: fixed;
+      top: -52;
+      left: -50;
+      width: 160px; /* Cursor size */
+      height: 140px; /* Cursor size */
+      pointer-events: none; /* Don't let the cursor block clicks */
+      z-index:9999; /* Ensure it stays on top */
+      background: url('wood.gif') no-repeat center center; /* Only the moving image */
+      background-size: contain; /* Ensure image fits inside the cursor */
+    }
+
+    /* Make sure clickable elements hide default cursor */
+    a, button, input, textarea, select {
+      cursor: none !important; /* Hide default cursor */
+    }
+
+    /* Scrollbar customization */
+    html::-webkit-scrollbar {
+      background-color: #fdfbee;
+      width: 10px;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background: #6d8d4c;
+      border-radius: 10px;
+      box-shadow: #6d8d4c;
+    }
+
+/* Navbar */
+#navbar {
+    background: #3b2d1500;
+    background-attachment: fixed;
+}
+
+.wonderland-text h1 {
+    font-family: "Romanesco", cursive !important;
+    font-weight: 400;
+    font-size: 100px;
+    color: #462b10;
+}
+
+.text-area {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	text-align: center;
+    font-family:"Romande ADF Script Std Italic";
+	text-transform: uppercase;
+	font-size: 50px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px #fff;
+}
+.wrapper {
+    position: fixed; /* Ensures it stays on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Higher than other elements */
+    pointer-events: none; /* Ensures it doesn’t interfere with clicks */
+}
+
+.round {
+    position: absolute;
+    width: 6px;  /* Small size */
+    height:6px; /* Small size */
+    border-radius: 50%; /* Ensures it's a perfect circle */
+    background: #fbfbe8;   
+    opacity: 0.8; /* Slight opacity for the glow effect */
+    box-shadow: 0 0 5px #f4f1bf, 0 0 10px #299cee, 0 0 15px #e4a6ce, 
+                0 0 20px #886242, 0 0 30px #a7dcf4, 0 0 40px #4b6680;
+    animation: animate 4s linear infinite, ani-2 2s linear infinite, glow 1.5s ease-in-out infinite alternate;
+}
+
+.round:nth-child(1) {
+    left: 5%;
+    animation-delay: 0.5s;
+}
+.round:nth-child(2) {
+    left: 65%;
+    animation-delay: 1s;
+}
+.round:nth-child(3) {
+    left: 90%;
+    animation-delay: 1.5s;
+}
+.round:nth-child(4) {
+    left: 18%;
+    animation-delay: 2s;
+}
+.round:nth-child(5) {
+    left: 93%;
+    animation-delay: 2.5s;
+}
+.round:nth-child(6) {
+    left: 52%;
+    animation-delay: 3s;
+}
+.round:nth-child(7) {
+    left: 65%;
+    animation-delay: 3.5s;
+}
+.round:nth-child(8) {
+    left: 35%;
+    animation-delay: 4s;
+}
+.round:nth-child(9) {
+    left: 85%;
+    animation-delay: 4.5s;
+}
+.round:nth-child(10) {
+    left: 45%;
+    animation-delay: 5s;
+}
+.round:nth-child(11) {
+    left: 36%;
+    animation-delay: 5.5s;
+}
+.round:nth-child(12) {
+    left: 72%;
+    animation-delay: 6s;
+}
+.round:nth-child(13) {
+    left: 14%;
+    animation-delay: 6.5s;
+}
+.round:nth-child(14) {
+    left: 70%;
+    animation-delay: 7s;
+}
+@keyframes animate {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+    20% {
+        top: 20%;
+        opacity: 0.8;
+    }
+    40% {
+        top: 40%;
+        opacity: 0.6;
+    }
+    60% {
+        top: 60%;
+        opacity: 0.4;
+    }
+    80% {
+        top: 80%;
+        opacity: 0.2;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+@keyframes ani-2 {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.5);
+    }
+}
+.hide-rounds {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* navbar end */
+
+
+/* Home section start */
+
+
+
+
+
+
+
+#Home {
+    background-color: #fdfbee;
+    width: 100%;
+    height: 90vh; /* Ensures it takes up the full viewport height */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin-bottom: 0; /* Removes unnecessary bottom margin */
+    padding: 0; /* Removes any extra padding */
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding/margins don’t affect width/height */
+}
+#under-door-image-2 {
+    position: absolute;
+    top: -1%; /* Adjust this to place the door image where you want */
+    left: 50%;
+    height: 760px;
+    transform: translateX(-50%); /* Center it horizontally */
+    width: 100%; /* Adjust size of the door image */
+    z-index: 2; /* Make sure it's on top */
+}
+#wonderland-text {
+    width: 100%;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgb(25, 60, 74);
+    font-size: 90px; /* slightly smaller to fit better */
+    font-weight: lighter;
+    animation: glow 3s infinite alternate; /* Smooth 3s breathing glow */
+    font-family: 'Cinzel', serif; /* Optional: medieval fairy tale feeling */
+    z-index: 3;
+}
+@keyframes glow {
+   
+    50% {
+        text-shadow: 
+            0 0 8px #b7d4e3,
+            0 0 15px #b5a66e,
+            0 0 20px #7d9dbb;
+    }
+}
+
+
+
+
+
+#TEXT {
+      text-align: center;
+    width: 100%;
+
+    position: relative;
+    top: 30px;
+
+    font-size: clamp(24px, 6vw, 60px);
+
+    font-weight: bold;
+    color: #462b10;
+
+    animation: glow 2s infinite alternate;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    line-height: 1.1;
+}
+/* RESPONSIVE DESIGN */
+
+/* Tablets - from 1024px to 820px */
+@media (max-width: 1024px) and (min-width: 820px) {
+ 
+
+    #under-door-image-2 {
+        height: 600px;
+    }
+
+    #Home {
+        height: auto;
+        margin-bottom: 400px; /* Add space between the section and the cards */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    #wonderland-text {
+        font-size: 4vw; /* Responsive font size based on viewport width */
+        position:relative; /* Position the element relative to its container */
+        top: -30px;
+        
+    }
+
+    #TEXT {
+        font-size: 4vw; /* Adjust text size */
+    }
+
+    #under-door-image-2 {
+        height: 400px;
+    }
+
+    #Home {
+        height: auto;
+        margin-bottom: 200px; /* Add space between the section and the cards */
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+     #wonderland-text h1 {
+        font-size: 4vw; /* Responsive font size based on viewport width */
+        position:relative; /* Position the element relative to its container */
+        top: 15px;
+       
+    }
+
+    #TEXT {
+        font-size: 4vw; /* Smaller text size */
+    }
+
+    #under-door-image-2 {
+        height: 300px;
+    }
+
+    #Home {
+        height: auto;
+        margin-bottom: 130px; /* Add space between the section and the cards */
+    }
+}
+
+
+#play-music {
+    position: fixed;
+    z-index: 9999;
+
+    top: 20px;
+    left: 20px;
+
+    background: none;
+    border: none;
+
+    font-size: clamp(14px, 2vw, 22px);
+
+    color: #6d8d4c;
+    cursor: pointer;
+
+    text-shadow: 0 0 30px rgba(255, 204, 0, 0.591);
+
+    transition:
+        text-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+#play-music:hover {
+    color: rgb(173, 148, 33);
+
+    text-shadow:
+        0 0 15px rgba(255, 215, 0, 1),
+        0 0 25px rgb(242, 138, 104),
+        0 0 35px rgb(252, 219, 157);
+
+    transform: scale(1.05);
+}
+
+#play-music:focus {
+    outline: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #play-music {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Global Styling */
+
+#about, #services, #part3 ,#part1,#part7{
+    text-align: center;
+    font-family:"Romande ADF Script Std Italic";
+    font-style: italic;
+    font-size: 40px;
+    padding: 50px 10px;
+    background-color: #fdfbee;
+
+}
+
+/* Heading Styling */
+/* Styling for all h3 inside cards */
+.card h3 {
+    text-align: center;
+font-size: clamp(18px, 4vw, 70px);
+    font-family:"Romande ADF Script Std Italic";
+    font-style: italic;
+    color: rgb(2, 67, 97);
+    text-shadow: #845e35;
+    margin: 5px 0;
+    margin-top: 130px;
+    font-weight: bold;
+    z-index: 3;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.3s ease, text-shadow 0.3s ease;
+      word-wrap: break-word;
+    padding: 0 10px;
+}
+
+/* Add a subtle floating effect */
+.card h3:hover {
+    transform: translateY(-3px);
+    text-shadow:
+    0 0 30px#d0aa77; /* Increase shadow for a 3D effect */
+
+}
+
+#tapHere i {
+    color: rgb(150, 168, 76);
+    font-size: 1rem; /* Increase the size */
+    
+}
+#tapHere {
+  color: rgb(150, 168, 76); /* change this to any color you want */
+      font-size: 2rem; /* Increase the size */
+
+}
+/* Card Styling */
+.move-card {
+    background-color: #9ba552;
+    top: 70px;
+    border: 0.5px solid;
+    height: 500px;
+    width: 100%; /* Make it responsive */
+    max-width: 500px; /* Keep it from getting too big */
+    border-radius: 1px;
+    text-align: center;
+    box-shadow:  
+        0 0 24px #553717; /* Increase shadow for a 3D effect */
+    margin: 20px auto; /* Centers the cards */
+    padding: 20px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Adds smooth transition for scale & glow */
+}
+
+/* Optionally, make the card hover effect more noticeable */
+.move-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow:  0 0 6px #553717, /* Increase shadow for a 3D effect */
+
+        0 0 12px #553717,
+        0 0 18px #d9b980,
+        0 0 24px #b08f5c; /* Increase shadow for a 3D effect */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .move-card {
+        height: 100%; /* Adjust height for small screens */
+        width: 90%; /* Slightly reduce width */
+        max-width: none; /* Allow flexibility */
+        
+    }
+}
+@media (max-width: 480px) {
+    .move-card {
+     
+        height: 100%; /* Adjust height for small screens */
+        width: 90%; /* Slightly reduce width */
+        max-width: none; /* Allow flexibility */
+    
+    }
+}
+/* Popup background only for Services */
+/* Popup background only for Services */
+#popup-part5,
+#popup-part6,
+#popup-services,
+#popup-part7,
+#popup-part1{
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(38, 35, 35, 0.85);
+  overflow-y: auto;
+  padding: 50px 0;
+}
+
+/* Popup content box */
+#popup-part5 .popup-content,
+#popup-part6 .popup-content{
+  background: #121403;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 1200px;
+  box-shadow: 0 0 50px 20px #493812; /* Stronger glow */
+    animation: fadeInScale 0.5s ease-out;
+}
+
+/* Close button */
+#popup-part5 .close-btn,
+#popup-part6 .close-btn{
+  float: right;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #aac072;
+  margin-bottom: 20px;
+}
+
+/* Image container */
+#popup-part5 .about,
+#popup-part6 .about{
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Larger images inside popup */
+#popup-part5 .popup-img,
+#popup-part6 .popup-img{  
+   width: 100%;
+  max-width: 950px; /* 🔥 bigger illustrations */
+  height: auto;
+  margin: 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#popup-part5 .popup-img:hover,
+#popup-part6 .popup-img:hover{
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+  #popup-part5 .popup-content,
+  #popup-part6 .popup-content{
+        padding: 20px;
+  }
+
+ 
+  #popup-part5 .popup-img,
+  #popup-part6 .popup-img{
+        max-width: 95%;
+  }
+}
+
+/* Popup background only for Services */
+
+/* Popup content box */
+ #popup-services .popup-content,
+ #popup-part7 .popup-content,
+#popup-part1 .popup-content{
+   border-radius: 20px;
+    animation: fadeInScale 0.5s ease-out;
+}
+
+ #popup-services .close-btn,
+  #popup-part7 .close-btn,
+ #popup-part1 .close-btn{
+  float: right;
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Image container */
+#popup-services .about,
+#popup-part7 .about,
+#popup-part1 .about{
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+gap: 25px; /* 👈 space between images */
+  
+}
+
+/* Larger images inside popup */
+#popup-services .popup-img,
+#popup-part7 .popup-img,
+#popup-part1 .popup-img{  
+   width: 100%;
+  max-width: 950px; /* 🔥 bigger illustrations */
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 25px; /* 👈 spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#popup-services .popup-img:hover,
+#popup-part1 .popup-img:hover,
+#popup-part1 .popup-img:hover{
+  transform: scale(1.04);
+  
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+  
+
+
+  #popup-services .popup-img,
+  #popup-part7 .popup-img,
+  #popup-part1 .popup-img {
+        max-width: 95%;
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+/* Popup styles */
+/* Popup Background */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+    overflow: auto;
+}
+  
+.popup-content {
+    background-color: #1b1f0d;
+    margin: 3% auto; /* Less margin = more vertical space used */
+    padding: 40px; /* Slightly more padding for spacious content */
+    border-radius: 10px; /* More rounded edges for a soft feel */
+    width: 95%; /* Use almost full screen width */
+    max-width: 1000px; /* Make max width larger */
+    box-shadow: 0 0 30px 20px #f8ffd6ae; /* Stronger glow */
+    animation: fadeInScale 0.5s ease-out;
+    font-size: 1.2rem; /* Optional: scale up text */
+}
+
+
+
+.popup-link-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.popup-link-container h3 {
+  color: #d5995d;
+  margin-bottom: 15px;
+}
+
+.popup-link {
+  display: inline-block;
+background: linear-gradient(to right, #d5995d,coral);
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.popup-link:hover {
+  background-color: #d5995d;
+  transform: scale(1.05);
+}
+/* Responsive for devices with a max width of 1024px (tablets) */
+@media (max-width: 1024px) {
+    .popup-content {
+        max-width: 80%; /* Reduce max-width */
+        padding: 15px; /* Adjust padding */
+    }
+    
+}
+
+/* Responsive for mobile devices up to 768px */
+@media (max-width: 768px) {
+    .popup-content {
+        max-width: 80%; /* Further reduce max-width */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Responsive for small phones (up to 540px) */
+@media (max-width: 540px) {
+    .popup-content {
+        max-width:80%; /* Even smaller width for very small screens */
+        padding: 8px; /* Reduce padding for better spacing */
+        font-size: 14px; /* Adjust font size to be readable on smaller screens */
+    }
+}
+
+/* Optional: FadeInScale animation (if you want to keep it) */
+
+
+  @keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+  
+  .close-btn {
+    color: #8db06a;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 4px;
+    top: 10px;
+    right: 25px;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #e1ce20, 0 0 10px #e1ce20, 0 0 15px #e1ce20;
+}
+
+
+
+/* Animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Animation */
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+/* Glow Effect on Hover */
+.close-btn:hover {
+    text-shadow: 0 0 10px #ffdd00, 0 0 20px #ffcc00, 0 0 30px #ffaa00;
+    transform: scale(1.1);
+}
+  
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+  }
+ .close-btn {
+    color: #dca537;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 4px;
+    top: 10px;
+    right: 25px;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #e1ce20, 0 0 10px #e1ce20, 0 0 15px #e1ce20;
+}
+    
+    /* Glow Effect on Hover */
+   /* Glow Effect on Hover */
+.close-btn:hover {
+    text-shadow: 0 0 10px #e69261, 0 0 20px #ed9599, 0 0 30px #ffaa00;
+    transform: scale(1.1);
+}
+  
+  
+
+ .go-to-page-btn {
+    font-size: 50px; /* Makes the text bigger */
+    background-color: #121403; /* Button color */
+    border: none;
+    border-radius: 10px; /* Rounds corners */
+    transition: all 0.3s ease;
+    color: rgb(255, 177, 164); /* Text color */
+    position: relative;
+    bottom:90px;     /* Distance from top */
+    left: 550px;   /* Distance from right side */
+    
+    /* Glow Effect */
+    text-shadow: 0 0 10px #cca24f, 0 0 20px #ffd700, 0 0 30px #ffcc00;
+}
+
+/* Hover effect */
+.go-to-page-btn:hover {
+    background-color: #2d330c00;
+    transform: scale(1.1); /* Makes button slightly bigger on hover */
+    transition: 0.3s;
+    text-shadow: 0 0 5px #cce693,   /* soft green */
+    0 0 10px #999b54,  /* soft red-pink */
+    0 0 15px #4e3a1c;  /* warm gold */
+   
+}
+/* General glowing button style */
+.back-arrow {
+    font-size: clamp(24px, 5vw, 50px);
+    position: relative;
+    bottom: clamp(10px, 5vw, 50px);
+left: clamp(0px, 3vw, 80px);    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #6d8d4c;
+    display: inline-block;
+    padding: clamp(8px, 2vw, 15px);
+    text-align: center;
+
+    text-shadow:
+        0 0 6px #553717,
+        0 0 12px #553717,
+        0 0 18px #d9b980,
+        0 0 24px #b08f5c;
+}
+/* TABLET */
+@media (max-width: 768px) {
+    .back-arrow {
+        font-size: 38px;
+       top: 35px;
+     right: clamp(-10px, 3vw, 80px);
+        padding: 10px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .back-arrow {
+        font-size: 28px;
+        top: 35px;
+     right: clamp(-10px, 3vw, 80px);
+          border: none;      
+           padding: 8px;
+    }
+}
+/* Hover effect */
+.back-arrow:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+    text-shadow:
+        0 0 25px #5c6f4096,
+        0 0 30px #3a281a;
+}
