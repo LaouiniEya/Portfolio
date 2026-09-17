@@ -5,8 +5,7 @@
     box-sizing: border-box;
     font-family: "Romande ADF Script Std Italic"; 
     font-size: 14px;
-    background-color: #3b2d1500; 
-     } 
+color: #000;     } 
 
 
  body, html {
@@ -211,14 +210,13 @@
 
 #Home {
     background-color: #fdfbee;
-    width: 70%;
+    width: 100%;
     height: 75vh; /* Ensures it takes up the full viewport height */
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
     margin-bottom: 0; /* Removes unnecessary bottom margin */
     padding: 0; /* Removes any extra padding */
-    border-radius: 5px;
     box-sizing: border-box; /* Ensures padding/margins don’t affect width/height */
 }
 #under-door-image-2 {
@@ -230,6 +228,7 @@
     width: 80%; /* Adjust size of the door image */
     z-index: 2; /* Make sure it's on top */
 }
+
 #wonderland-text {
     width: 100%;
     position: absolute;
